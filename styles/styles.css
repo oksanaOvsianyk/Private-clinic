@@ -1,0 +1,563 @@
+/* General Styles for All Devices */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: #2b7fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Header styles */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none; /* Кнопка для мобільної версії буде прихована */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: relative;
+}
+
+.menu-toggle .menu-icon:before,
+.menu-toggle .menu-icon:after {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.menu-toggle .menu-icon:before {
+  top: -8px;
+}
+
+.menu-toggle .menu-icon:after {
+  top: 8px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #003ea1;
+  font-size: 16px;
+}
+
+.header-icons a img {
+  width: 24px;
+  margin-left: 15px;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.9) 35%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(/img/o.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 50px 50px;
+  min-height: 400px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h2 {
+  font-size: 98px;
+  color: #2b7fff;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.primary-button {
+  padding: 12px 30px;
+  background-color: #2b7fff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #003ea1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* About Section */
+.about {
+  padding: 50px 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about h2 {
+  font-size: 36px;
+  text-align: center;
+  color: #003ea1;
+}
+
+.about img {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.about p {
+  width: 50%;
+  font-size: 18px;
+}
+
+/* Advantages Section */
+.advantages {
+  background: linear-gradient(
+    to bottom,
+    rgba(173, 216, 230, 0.7) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  padding: 50px 0;
+  text-align: center;
+}
+
+.advantages h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.advantage {
+  width: 25%;
+  background: white;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.advantage img {
+  width: 50px;
+}
+
+.advantage p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Doctors Section */
+.doctors {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.doctors h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.doctors-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Проміжок між картками */
+  flex-wrap: wrap; /* Додаємо можливість переносити картки на новий рядок */
+}
+
+.doctor {
+  width: 30%;
+  /* Для більшості екранів */
+}
+
+.doctor-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  padding: 10px;
+  width: 100%;
+}
+
+.doctor-text h3,
+.doctor-text p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.doctor-text h3 {
+  font-weight: bold;
+  color: white;
+}
+
+/* Map Section */
+.map {
+  background: #f0f4ff;
+  padding: 50px 0;
+}
+
+.map h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+
+.map-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+iframe {
+  height: 400px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.contact-form {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #0056d6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #003ea1;
+}
+
+footer {
+  background-color: #003399;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-privacy a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-privacy a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 80px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .advantage {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .doctor {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+  .doctors-list {
+    flex-direction: row; /* Для планшетів залишаємо горизонтальний напрямок */
+    gap: 20px; /* Відстань між картками */
+  }
+
+  .advantages-list {
+    flex-direction: row; /* Для планшетів залишаємо горизонтальний напрямок */
+    gap: 20px; /* Відстань між картками */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 60px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-section {
+    padding: 50px 0;
+  }
+
+  .main-header {
+    padding: 15px 0;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about img {
+    width: 80%;
+    margin: 20px 0;
+  }
+
+  .about p {
+    width: 100%;
+  }
+
+  .advantages-list {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .doctor {
+    width: 100%; /* Картки лікарів будуть займати всю ширину на малих екранах */
+    margin-bottom: 20px; /* Додаємо відступ між картками */
+  }
+
+  .doctors-list {
+    justify-content: center; /* Центруємо картки лікарів на малих екранах */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
+  .map-container {
+    flex-direction: column; /* Розташовуємо карту і форму вертикально */
+    align-items: center; /* Вирівнюємо по центру */
+  }
+
+  iframe {
+    width: 100%; /* Робимо карту на весь доступний простір */
+    height: 300px; /* Зменшуємо висоту карти */
+  }
+
+  .contact-form {
+    width: 100%; /* Ширина форми на весь доступний простір */
+    margin-top: 20px; /* Додаємо відступ для форми */
+  }
+  .main-nav {
+    display: none; /* Сховуємо меню за замовчуванням */
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px; /* Відступ від хедера */
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
+    flex-direction: column; /* Переміщаємо елементи меню в стовпчик */
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 10px 0; /* Відступи між пунктами меню */
+  }
+
+  .menu-toggle {
+    display: block; /* Показуємо кнопку для мобільної версії */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 40px;
+  }
+
+  .primary-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .about p,
+  .advantages h2,
+  .doctors h2 {
+    font-size: 14px;
+  }
+
+  .contact-form input,
+  .contact-form button {
+    font-size: 14px;
+  }
+}
+/* Анімація для відкриття меню */
+.nav-list.open {
+  display: flex; /* Відкриваємо меню */
+}
+
+.nav-list {
+  display: none; /* Початково меню приховане */
+  transition: all 0.3s ease-in-out; /* Плавний перехід */
+}
+.black {
+  color: black;
+}
