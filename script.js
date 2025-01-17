@@ -1,9 +1,17 @@
-// Знаходимо елементи на сторінці
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav-list');
+// Відкриття модального вікна для форми
+function openFormModal() {
+  const modal = document.getElementById('formModal');
+  modal.classList.add('show');
+}
 
-// Додаємо слухач подій на кнопку
-menuToggle.addEventListener('click', () => {
-  // Перемикаємо клас "open" для навігаційного меню
-  navList.classList.toggle('open');
-});
+// Відкриття модального вікна для навігації
+function openNavModal() {
+  const modal = document.getElementById('navModal');
+  modal.classList.add('show');
+}
+
+// Закриття модальних вікон
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.remove('show');
+}
